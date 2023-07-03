@@ -33,7 +33,7 @@ namespace Zoo
             Console.WriteLine();
             Console.WriteLine();
 
-            Eagle eagle = new Eagle("Crowned Eagle", 18, 90.10, 5.40, true, 10);
+            Eagle eagle = new Eagle("Crowned Eagle", 18, 90.10, 5.40, true, 10) { AverageEgg = 8, ClawLength= 4.2 };
 
             Console.WriteLine($"The Eagle Name is : {eagle.Name} his age is : {eagle.Age}. his  average speed {eagle.Speed}Km/h. ");
 
@@ -44,6 +44,8 @@ namespace Zoo
             Console.WriteLine(eagle.Fly());
             Console.WriteLine(eagle.DisplayWingSize());
             Console.WriteLine(eagle.Beak());
+            eagle.LayEgg();
+            eagle.Claw();
 
 
 
@@ -51,7 +53,7 @@ namespace Zoo
             Console.WriteLine();
             Console.WriteLine();
 
-            Duck duck = new Duck("Batot", 8, 20.7, 50.4, false, "Zoo lake");
+            Duck duck = new Duck("Batot", 8, 20.7, 50.4, false, "Zoo lake") { SwimmingSpeed = 40, AverageEgg = 12 };
 
             Console.WriteLine($"The Duck Name is : {duck.Name} his age is : {duck.Age} , his  average speed {duck.Speed}Km/h. ");
 
@@ -61,13 +63,15 @@ namespace Zoo
             Console.WriteLine(duck.Living());
             Console.WriteLine(duck.Fly());
             Console.WriteLine(duck.DisplayWingSize());
-            Console.WriteLine(duck.Swim());
+            duck.Swimmable();
+            duck.LayEgg();
 
 
             Console.WriteLine();
             Console.WriteLine();
 
-            Crocodile croc = new Crocodile("Gustave", 18, 20.7, false, true, "Dark Green", 4.2);
+            Crocodile croc = new Crocodile("Gustave", 18, 20.7, false, true, "Dark Green", 4.2)
+            { AverageEgg = 50, SwimmingSpeed = 30 ,ClawLength = 5.4};
 
             Console.WriteLine($"The Crocodile Name is : {croc.Name} his age is : {croc.Age} , his  average speed {croc.Speed}Km/h. ");
 
@@ -80,11 +84,14 @@ namespace Zoo
             Console.WriteLine(croc.Poisonous());
             Console.WriteLine(croc.SharpTeeth());
             Console.WriteLine(croc.BodyLength());
+            croc.LayEgg();
+            croc.Swimmable();
+            croc.Claw();
 
             Console.WriteLine();
             Console.WriteLine();
 
-            Snake snake = new Snake("Sankora", 14, 60.5, true, false, "White");
+            Snake snake = new Snake("Sankora", 14, 60.5, true, false, "White") { AverageEgg = 20 };
 
             Console.WriteLine($"The Snake Name is : {snake.Name} his age is : {snake.Age} , his  average speed {snake.Speed}Km/h. ");
 
@@ -98,6 +105,8 @@ namespace Zoo
             Console.WriteLine(snake.Poisonous());
             Console.WriteLine(snake.SharpTeeth());
             Console.WriteLine(snake.ShedSkin());
+            snake.LayEgg();
+
 
 
 

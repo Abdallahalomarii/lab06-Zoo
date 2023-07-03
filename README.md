@@ -30,3 +30,19 @@ so to save some informations.
  is already exist and has a defienition for the base class for example and you add your own code.
      - ` public virtual Dangerous()` in Mammal class the virtual means it is polymorphism  
      - and used it inside the lion and Horse classes .
+
+# Zoo part2 
+
+- ## Interface : 
+    - the interface is a blueprint and can carry methods and members and events can be inhertied
+    and inheritance from another Interfaces and class i think im not sure but i remember i read something like this 
+    and within interface the classes can inherit from the interfaces and the benift of using 
+    interface is to make the class inherit from multi interfaces while it cannot inherit from mmulti classes.
+
+    - i used 3 interfaces one for animal that can layeggs and another one for animal can swim and another one for animals who has Claw
+    so for the example the crocodile animal is a reptile and can swim, layeggs and has Claw
+    so this class inheritd from 3 interfaces and from the reptile class 
+    another classes used the interface (Duck Class, Eagle Class, Snake Class)
+    each one of them has own property and the interface was an new method for the animals that has a shared method 
+    that not came from same parent, or family.
+
