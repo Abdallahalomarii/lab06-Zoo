@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Zoo.Interface;
 
 namespace classes.Abstract_Classes
 {
@@ -15,6 +16,8 @@ namespace classes.Abstract_Classes
         public abstract string FurColor { get; set; }
         // polymorphism member
         public virtual bool IsPoisonous { get; set; }
+
+
 
         public Reptiles(string name, int age, double speed, bool isPoisonous)
             : base (name,age,speed)

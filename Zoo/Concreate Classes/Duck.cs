@@ -5,11 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using Zoo.Interface;
 
 namespace classes.Concreate_Classes
 {
     // concreate Class third Layer of inheritance 
-    public class Duck :Birds
+    public class Duck : Birds,ISwimable,IEggLayer
     {
         // override the abstract  member
         public override bool CanFly { get; set; }
@@ -17,6 +18,11 @@ namespace classes.Concreate_Classes
         public override double WingSpan { get; set; }
         // Encapsulation 
         private string Habitat { get; set; }
+        // Member from ISwimmable Interface
+        public int SwimmingSpeed { get; set; }
+        // Member from IEggLayer
+        public int AverageEgg { get; set; }
+
 
         public Duck(string name, int age, double speed, double wingSpan, bool canFly, string habitat) : base(name, age, speed, wingSpan)
         {
@@ -67,9 +73,16 @@ namespace classes.Concreate_Classes
             return $"{Name}'s wing span is approximately {WingSpan} centimeters.";
         }
 
-        public string Swim()
+       
+        // Member from ISwimable interface
+        public void Swimmable()
         {
-            return $"{Name} is a proficient swimmer, moving gracefully through the water at a speed of {Speed} km/h.";
+            Console.WriteLine($"The Duck {Name} Can Swim and speed while swimming is {SwimmingSpeed}KM/h ");
+        }
+        // Member from IEggLayer interface
+        public void LayEgg()
+        {
+            Console.WriteLine($"The Duck {Name} Can Lay eggs with average of {AverageEgg} Eggs");
         }
     }
 }

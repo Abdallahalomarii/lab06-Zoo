@@ -5,11 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using Zoo.Interface;
 
 namespace classes.Concreate_Classes
 {
     // concreate Class third Layer of inheritance 
-    public class Snake : Reptiles
+    public class Snake : Reptiles,IEggLayer
     {
         // override the abstract  member
         public override bool HasLegs { get; set; }
@@ -17,6 +18,9 @@ namespace classes.Concreate_Classes
         public override string FurColor { get; set; }
         // override the Polymorphism member
         public override bool IsPoisonous { get; set; }
+        // Member from the IEggLayer Interface
+        public int AverageEgg { get; set; }
+
         public Snake(string name, int age, double speed, bool isPoisonous, bool hasLegs, string furColor)
             : base(name, age, speed, isPoisonous)
         {
@@ -85,6 +89,12 @@ namespace classes.Concreate_Classes
         public string ShedSkin()
         {
             return $"{Name} periodically sheds its skin as it grows.";
+        }
+
+        // Method from IEggLayer interface
+        public void LayEgg()
+        {
+            Console.WriteLine($"The Snake {Name} Can Lay Eggs With average of {AverageEgg}");
         }
     }
 
