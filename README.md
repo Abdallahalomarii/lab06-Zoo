@@ -46,3 +46,11 @@ so to save some informations.
     each one of them has own property and the interface was an new method for the animals that has a shared method 
     that not came from same parent, or family.
 
+    - Crocodile inherit from (IEggLayer , IHaveClaw , ISwimable)
+    - Snake inherit from (IEggLayer)
+    - Duck inherit from (ISwimable , IEggLayer)
+    - Eagle inherit from (IHaveClaw , IEggLayer)
+
+
+    ![Uml Diagram](./lab07.jpg)
+    #### i hope the uml diagram clear that my best in drawing :smile:
